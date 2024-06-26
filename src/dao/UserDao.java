@@ -19,15 +19,15 @@ public class UserDao {
 
     }
 
-    public ArrayList<User> findAll(){
-        ArrayList<User> userList = new ArrayList <>();
+    public ArrayList<User> findAll() {
+        ArrayList<User> userList = new ArrayList<>();
         String sql = "select * from public.user";
-        try{
+        try {
             ResultSet rs = this.con.createStatement().executeQuery(sql);
-            while(rs.next()){
+            while (rs.next()) {
                 userList.add(this.match(rs));
-                }
-        }catch (SQLException e){
+            }
+        } catch (SQLException e) {
             System.out.println(e.getMessage());
         }
         return userList;

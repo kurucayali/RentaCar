@@ -8,7 +8,7 @@ public class Db {
 // Singleton Design Pattern
     private static Db instance=null;
     private Connection connection = null;
-    private final String DB_URL = "jdbc:postgresql://localhost:5433/rentacar";
+    private final String DB_URL = "jdbc:postgresql://localhost:5432/rentacar";
     private final String DB_USERNAME = "postgres";
     private final String DB_PASS = "postgres";
 
